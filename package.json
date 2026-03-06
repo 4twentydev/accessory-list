@@ -1,24 +1,42 @@
 {
-  "name": "pwa-vite-react-boilerplate",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.0"
-  },
-  "devDependencies": {
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "@vitejs/plugin-react": "^4.3.2",
-    "sass": "^1.80.5",
-    "typescript": "^5.6.3",
-    "vite": "^5.4.10",
-    "vite-plugin-pwa": "^0.20.5"
-  }
+	"name": "accessory-list",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev --turbopack",
+		"build": "next build",
+		"start": "next start",
+		"lint": "biome check .",
+		"lint:fix": "biome check --write ."
+	},
+	"dependencies": {
+		"next": "^15.2.1",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0",
+		"better-sqlite3": "^11.8.1",
+		"jspdf": "^2.5.2",
+		"jspdf-autotable": "^3.8.4",
+		"bcryptjs": "^2.4.3",
+		"jsonwebtoken": "^9.0.2"
+	},
+	"devDependencies": {
+		"@types/node": "^22.13.5",
+		"@types/react": "^19.0.10",
+		"@types/react-dom": "^19.0.4",
+		"@types/better-sqlite3": "^7.6.12",
+		"@types/bcryptjs": "^2.4.6",
+		"@types/jsonwebtoken": "^9.0.7",
+		"@biomejs/biome": "^1.9.4",
+		"@tailwindcss/postcss": "^4.0.0",
+		"tailwindcss": "^4.0.0",
+		"typescript": "^5.7.3"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"better-sqlite3",
+			"@biomejs/biome",
+			"sharp",
+			"core-js"
+		]
+	}
 }
